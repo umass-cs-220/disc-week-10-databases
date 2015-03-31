@@ -65,10 +65,12 @@ Write the following queries, test them in the web console, and record the query
 1. List every record in the CARS table
 
 1. List only the make, model and year of every Toyota
+    *Hint: You can restrict which columns are displayed in the SELECT clause*
 
 1. List all cars that were released during or after 2010.
 
 1. List all Hondas that have 'black' as a color option
+    *Hint: Use an INNER JOIN to match cars to colors*
 
 1. List all of the distinct color options for Fords
 
