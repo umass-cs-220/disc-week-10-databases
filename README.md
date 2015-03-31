@@ -7,10 +7,7 @@ concepts discussed in lecture by writing a series of queries over a small
 database.
 
 If you did not bring a laptop today, please partner up with someone else. Make
-sure both you and your partner's names are listed in the README.md:
-
-
-Do not include any additional formatting.
+sure both you and your partner's names are listed in the README.md.
 
 **Please download** the [starter kit] for this activity. This will download a
 file called `disc-week-10-datases-master.zip`. Unzip this directory somewhere in
@@ -19,7 +16,7 @@ repository.**
 
 [starter kit]: https://github.com/umass-cs-220/disc-week-10-databases/archive/master.zip
 
-## Task
+## Setup
 
 **NOTE:** There is no programming for this assignment. Copy each query you write
 into a file called `queries.txt`. This will be your deliverable for the
@@ -27,25 +24,28 @@ assignment, along with your README.
 
 You will be using a small database of cars for the assignment. We've provided
 the database as part of the starter kit linked above, so you can jump straight
-to writing queries.
+to writing queries. The database contains two tables:
 
-Make | Model | Year | Color
---- | --- | --- | ---
-Toyota | Corolla | 2008 | Black
-Toyota | Camry | 2012 | Silver
-Toyota | Camry | 2008 | Red
-Honda | Civic | 2013 | White
-Honda | Civic | 2010 | Black
-Honda | Accord | 2012 | Silver
-Ford | Focus | 2008 | White
-Ford | Focus | 2010 | Red
-Ford | Mustang | 2013 | Red
+- CARS: Records the make, model and year of each car with a unique ID
+- COLORS: Records the color options for each car, linked to the car's ID
 
-**You should be committing between steps in order to save your progress.**
+1. Download and unzip the starter kit. You can do this directly inside the VM:
+
+    ```
+    wget https://github.com/umass-cs-220/disc-week-10-databases/archive/master.zip
+    unzip master.zip
+    ```
+    This will create a directory called disc-week-10-databases-master.
+
+1. Inside the unzipped directory, run the h2 script (`sh h2`) to start the
+   database. You can connect to the database through your web browser at
+   `localhost:4001`. You will have to create a second connection to your VM
+   (e.g. creating another PuTTY instance or running vagrant ssh from another
+   terminal) in order to interact with your VM.
 
 1. In your repository, create a folder called **dis10**.
 
-1. Create a **README.md** file that contains the lines:
+1. Create a **README.md** file that contains the following:
 
     CMPSCI 220 Programming Methodology  
     Discussion Week 10  
@@ -54,27 +54,23 @@ Ford | Mustang | 2013 | Red
     Your Partner's Name (if applicable)  
     Your Partner's Spire ID (if applicable)  
   
-1. Create a file called `queries.txt`.
+1. Create a file called `queries.txt`. Record the queries you create for Task 2
+   in this file.
 
-1. Write the following queries:
+## Task
 
-    println("Finding all Toyotas:")
-    prettyPrint(carFinder.find("Toyota"))
+Write the following queries, test them in the web console, and record the query
+(and ONLY the query) in queries.txt.
 
-    println("Finding all Black Hondas:")
-    prettyPrint(carFinder.find("Black", "Honda"))
+1. List every record in the CARS table
 
-    println("Removing all Hondas")
-    carFinder.remove("Honda")
+1. List only the make, model and year of every Toyota
 
-    println("Finding all cars from 2010:")
-    prettyPrint(carFinder.find("2010"))
+1. List all cars that were released during or after 2010.
 
-    println("Removing all Ford Focuses")
-    carFinder.remove("Ford", "Focus")
+1. List all Hondas that have 'black' as a color option
 
-    println("Finding all Fords:")
-    prettyPrint(carFinder.find("Ford"))
+1. List all of the distinct color options for Fords
 
 ## Deliverables
 
