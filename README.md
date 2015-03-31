@@ -47,13 +47,13 @@ Ford | Mustang | 2013 | Red
 
 1. Create a **README.md** file that contains the lines:
 
-    CMPSCI 220 Programming Methodology
-    Discussion Week 10
-    Your Name
-    Your Spire ID
-    Your Partner's Name (if applicable)
-    Your Partner's Spire ID (if applicable)
-
+    CMPSCI 220 Programming Methodology  
+    Discussion Week 10  
+    Your Name  
+    Your Spire ID  
+    Your Partner's Name (if applicable)  
+    Your Partner's Spire ID (if applicable)  
+  
 1. Create a file called `queries.txt`.
 
 1. Write the following queries:
