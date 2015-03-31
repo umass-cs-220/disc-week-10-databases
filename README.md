@@ -38,10 +38,15 @@ to writing queries. The database contains two tables:
     This will create a directory called disc-week-10-databases-master.
 
 1. Inside the unzipped directory, run the h2 script (`sh h2`) to start the
-   database. You can connect to the database through your web browser at
-   `localhost:4001`. You will have to create a second connection to your VM
-   (e.g. creating another PuTTY instance or running vagrant ssh from another
-   terminal) in order to interact with your VM.
+   database. You will have to create a second connection to your VM (e.g.
+   creating another PuTTY instance or running vagrant ssh from another terminal)
+   in order to interact with your VM.
+
+1. Connect to the database's web console by point your web browser at
+   `localhost:4001`. In the form that appears, change the JDBC URL to 
+    `jdbc:h2:~/disc-week-10-databases-master/dbs/test`. *Note: This expects the
+    disc-week-10-databases-master directory to be in your home directory. You
+    will have to adjust this URL accordingly if you move the directory.*
 
 1. In your repository, create a folder called **dis10**.
 
