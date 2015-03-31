@@ -16,5 +16,13 @@ project/plugins/project/
 .scala_dependencies
 .worksheet
 
+# Vim
+*.sw[a-z]
+
+# Emacs
+*~
+\#*\#
+.\#*
+
 # H2 databases
 *.db
