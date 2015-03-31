@@ -40,7 +40,8 @@ to writing queries. The database contains two tables:
 1. Inside the unzipped directory, run the h2 script (`sh h2`) to start the
    database. You will have to create a second connection to your VM (e.g.
    creating another PuTTY instance or running vagrant ssh from another terminal)
-   in order to interact with your VM.
+   in order to interact with your VM. If you choose to run H2 outside of
+   vagrant, running the VM will make the H2 web console inaccessible.
 
 1. Connect to the database's web console by point your web browser at
    `localhost:4001`. In the form that appears, change the JDBC URL to 
@@ -69,15 +70,18 @@ Write the following queries, test them in the web console, and record the query
 
 1. List every record in the CARS table
 
-1. List only the make, model and year of every Toyota. *Hint: You can restrict
-   which columns are displayed in the SELECT clause.*
+1. List only the make, model and year of every Toyota.
 
 1. List all cars that were released during or after 2010.
 
 1. List all Hondas that have 'black' as a color option *Hint: Use an INNER JOIN
    to match cars to colors.*
 
-1. List all of the distinct color options for Fords
+1. List all of the distinct color options for Fords.
+
+1. Toyota recently added 'bright blue' as a color option for all of their cars.
+   Write a query that adds 'bright blue' to the COLORS table for all Toyota
+   cars. *Hint: You can combine INSERT INTO and SELECT clauses.*
 
 ## Deliverables
 
@@ -100,36 +104,8 @@ Do not worry if you do not have everything finished.**
 
 1. Make sure everything is added, committed and pushed.
 
-2. Create a tag: `git tag -a dis10 -m "dis10"`
+2. Create a tag: `git tag -a dis10 -m "some commit message"`
 
 3. Push the tag to the gitblit repository: `git push origin dis10`
 
 We will use this tag when grading. Make sure that you create the tag right before your final push.
-
-## Expected Output from Queries
-
-```
-Finding all Toyotas:
-1. Toyota Camry 2008 Red
-2. Toyota Camry 2012 Silver
-3. Toyota Corolla 2008 Black
-
-Finding all Black Hondas:
-1. Honda Civic 2010 Black
-
-Removing all Hondas
-
-Finding all cars from 2010
-1. Ford Focus 2010 Red
-
-Removing all Ford Focuses
-
-Finding all Fords:
-1. Ford Mustang 2013 Red
-
-End state:
-1. Ford Mustang 2013 Red
-2. Toyota Camry 2008 Red
-3. Toyota Camry 2012 Silver
-4. Toyota Corolla 2008 Black
-```
