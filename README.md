@@ -45,7 +45,7 @@ to writing queries. The database contains two tables:
 
 1. Connect to the database's web console by point your web browser at
    `localhost:4001`. In the form that appears, change the JDBC URL to 
-    `jdbc:h2:~/disc-week-10-databases-master/dbs/test`. *Note: This expects the
+    `jdbc:h2:~/disc-week-10-databases-master/dbs/cars`. *Note: This expects the
     disc-week-10-databases-master directory to be in your home directory. You
     will have to adjust this URL accordingly if you move the directory.*
 
